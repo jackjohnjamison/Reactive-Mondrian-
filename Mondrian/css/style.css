@@ -1,0 +1,110 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 1em;
+    font-size: 1em;
+    font-family: calibri;
+    background: #eee;
+}
+
+#main-wrap {
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 64em;
+    background: white;
+}
+
+#mondrian-canvas {
+    width: 100%;
+    position: relative;
+    padding-bottom: 44.72%;
+    background: black;
+}
+
+.mondrian-pane {
+    position: absolute;
+    background: white;
+}
+
+.border-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid 5px black;
+}
+
+#mon-1 {
+    width: 44.72%;
+    padding-bottom: 44.72%;
+    left: 27.64%;
+}
+
+#mon-2 {
+    width: 27.64%;
+    padding-bottom: 27.64%;
+}
+
+#mon-3 {
+    width: 17.08%;
+    padding-bottom: 17.08%;
+    left: 10.56%;
+    bottom: 0;
+}
+
+#mon-4 {
+    width: 10.56%;
+    padding-bottom: 10.56%;
+    bottom: 0;
+}
+
+#mon-5 {
+    width: 6.52%;
+    padding-bottom: 6.52%;
+    bottom: 23.61%;
+}
+
+#mon-6 {
+    width: 27.64%;
+    padding-bottom: 27.64%;
+    right: 0;
+    bottom: 0;
+}
+
+#mon-7 {
+    width: 17.08%;
+    padding-bottom: 17.08%;
+    right: 0;
+    top: 0;
+}
+
+#mon-8 {
+    width: 10.56%;
+    padding-bottom: 10.56%;
+    right: 17.08%;
+    top: 14.59%;
+}
+
+#mon-9 {
+    width: 6.52%;
+    padding-bottom: 6.52%;
+    right: 17.08%;
+}
+
+/* 
+    Sizing notes
+    Golden Ratio = 0.618033988769;
+    ratio calc = 138.1966011316441
+    38.19660112737204:61.8033988769
+    box1 44.72135954923158
+    box2 27.6393202253842
+    box3 17.08203932575789
+    box4 10.55728090080707
+    box5 6.524758425680576
+*/
