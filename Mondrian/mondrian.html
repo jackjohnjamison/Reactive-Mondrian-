@@ -19,7 +19,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         
         <!-- JavaScript -->
-        <script type="text/javascript" src="js/tests.js"></script>
+        <script type="text/javascript" src="js/mondrian.js"></script>
 
     </head>
     
@@ -29,17 +29,40 @@
             
             <h1>Reactive Mondrian</h1>
             
-            <div id="mondrian-canvas">
-                <div id="mon-1" class="mondrian-pane"><div class="border-box"></div></div>
-                <div id="mon-2" class="mondrian-pane"><div class="border-box"></div></div>
-                <div id="mon-3" class="mondrian-pane"><div class="border-box"></div></div>
-                <div id="mon-4" class="mondrian-pane"><div class="border-box"></div></div>
-                <div id="mon-5" class="mondrian-pane"><div class="border-box"></div></div>
-                <div id="mon-6" class="mondrian-pane"><div class="border-box"></div></div>
-                <div id="mon-7" class="mondrian-pane"><div class="border-box"></div></div>
-                <div id="mon-8" class="mondrian-pane"><div class="border-box"></div></div>
-                <div id="mon-9" class="mondrian-pane"><div class="border-box"></div></div>
-            </div>
+            <section>
+                <div id="mondrian-canvas">
+                    <div id="mon-1" class="mondrian-pane"><div class="border-box"></div></div>
+                    <div id="mon-2" class="mondrian-pane"><div class="border-box"></div></div>
+                    <div id="mon-3" class="mondrian-pane"><div class="border-box"></div></div>
+                    <div id="mon-4" class="mondrian-pane"><div class="border-box"></div></div>
+                    <div id="mon-5" class="mondrian-pane"><div class="border-box"></div></div>
+                    <div id="mon-6" class="mondrian-pane"><div class="border-box"></div></div>
+                    <div id="mon-7" class="mondrian-pane"><div class="border-box"></div></div>
+                    <div id="mon-8" class="mondrian-pane"><div class="border-box"></div></div>
+                    <div id="mon-9" class="mondrian-pane"><div class="border-box"></div></div>
+                </div><!-- END #mondrian-canvas -->
+            </section>
+            
+            <section>
+                <fieldset>
+                    <legend>CSS3 Properties</legend>
+                    
+                    <label>Include Canvas </label><input type="checkbox" value="false" id="include-canvas"/><br />
+                    
+                    <label>Border Width <span id="border-width-output">3px</span></label><br />
+                    <input type="range" min="1" max="10" value="3" id="border-width-slider" onchange="update_border_width()" />
+                    <br />
+                    
+                    <label>Border Radius <span id="radius-px-output">by px</span></label><br />
+                    <input type="range" min="0" max="200" value="0" id="border-radius-slider-px" onchange="update_border_radius_px()" />
+                    <br />
+                    
+                    <label>Border Radius <span id="radius-percentage-output">by %</span></label><br />
+                    <input type="range" min="0" max="50" value="0" id="border-radius-slider-percentage" onchange="update_border_radius_percentage()" />
+                    <br />
+                    
+                </fieldset>
+            </section>
             
         </div>
         

@@ -1,23 +1,30 @@
 html {
-    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    height: 100%;
     padding: 0;
-    margin: 1em;
+    margin: 0 1em;
     font-size: 1em;
     font-family: calibri;
-    background: #eee;
 }
 
 #main-wrap {
-    min-height: 100%;
     margin: 0 auto;
     padding: 1em;
     max-width: 64em;
-    background: white;
+    background: #eee;
 }
+
+#include-canvas {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+/**************************************************************
+    Mondrian Styles
+***************************************************************/
 
 #mondrian-canvas {
     width: 100%;
@@ -28,7 +35,6 @@ body {
 
 .mondrian-pane {
     position: absolute;
-    background: white;
 }
 
 .border-box {
@@ -37,7 +43,8 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    border: solid 5px black;
+    background: white;
+    border: solid 3px black;
 }
 
 #mon-1 {
@@ -51,6 +58,10 @@ body {
     padding-bottom: 27.64%;
 }
 
+#mon-2 > .border-box {
+    background: red;
+}
+
 #mon-3 {
     width: 17.08%;
     padding-bottom: 17.08%;
@@ -62,6 +73,10 @@ body {
     width: 10.56%;
     padding-bottom: 10.56%;
     bottom: 0;
+}
+
+#mon-4 > .border-box {
+    background: yellow;
 }
 
 #mon-5 {
@@ -82,6 +97,10 @@ body {
     padding-bottom: 17.08%;
     right: 0;
     top: 0;
+}
+
+#mon-7 > .border-box {
+    background: blue;
 }
 
 #mon-8 {
@@ -108,3 +127,11 @@ body {
     box4 10.55728090080707
     box5 6.524758425680576
 */
+
+/**************************************************************
+    Fieldset Styles
+***************************************************************/
+
+fieldset {
+    margin: 2em 0;
+}
