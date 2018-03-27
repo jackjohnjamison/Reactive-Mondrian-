@@ -39,7 +39,7 @@ function update_border_radius_percentage() {
     
     var includeCanvas = document.getElementById('include-canvas').checked;
     
-    if (includeCanvas) { document.getElementById('mondrian-canvas').style.borderRadius = radiusValue; };
+    if (includeCanvas) { document.getElementsByClassName('canvas')[0].style.borderRadius = radiusValue; };
     
     for (var i = 0; i < arrayLength; i++) {
         borderBoxElements[i].style.borderRadius = radiusValue;
@@ -64,7 +64,7 @@ function update_border_radius_px() {
     
     var includeCanvas = document.getElementById('include-canvas').checked;
     
-    if (includeCanvas) { document.getElementById('mondrian-canvas').style.borderRadius = radiusValue; };
+    if (includeCanvas) { document.getElementsByClassName('canvas')[0].style.borderRadius = radiusValue; };
     
     for (var i = 0; i < arrayLength; i++) {
         borderBoxElements[i].style.borderRadius = radiusValue;
@@ -76,3 +76,72 @@ function update_border_radius_px() {
     
     document.getElementById('border-radius-slider-percentage').value = 0;
 }
+
+
+///////////////////////////////////////////////////////////
+    //  Box Shadow Functions
+///////////////////////////////////////////////////////////
+
+// Apply Shadow
+
+var boxShadows = {
+                
+                shadow : function() {
+                    var targetClass = document.getElementById('shadowSelect').value;
+                    
+                    if (targetClass === "") {
+                        alert("Select box shadow type");
+                        return;
+                    };
+                    
+                    var inset = "";
+                    
+                    if (targetClass === "border-box") {
+                        inset = "inset ";
+                    }
+                    
+                    var xOffset = document.getElementById('offset-x').value + "px ";
+                    
+                    var yOffset = document.getElementById('offset-y').value + "px ";
+                    
+                    var blurRadius = document.getElementById('blur-radius').value + "px ";
+                    
+                    var spreadRadius = document.getElementById('spread-radius').value + "px ";
+                    
+                    var classArray = document.getElementsByClassName(targetClass);
+                    
+                    var arrayLength = classArray.length;
+                    
+                    for (var i = 0; i < arrayLength; i++) {
+                        classArray[i].style.boxShadow = inset + xOffset + yOffset + blurRadius + spreadRadius;
+                    }
+                    
+                },
+    
+                reset : function() {
+                    
+                    document.getElementById('offset-x').value = 0;
+                    
+                    document.getElementById('offset-y').value = 0;
+                    
+                    document.getElementById('blur-radius').value = 0;
+                    
+                    document.getElementById('spread-radius').value = 0;
+                    
+                    var targetClass = document.getElementById('shadowSelect').value;
+                    
+                    var classArray = document.getElementsByClassName(targetClass);
+                    
+                    var arrayLength = classArray.length;
+                    
+                    for (var i = 0; i < arrayLength; i++) {
+                        classArray[i].style.boxShadow = "";
+                    }
+            }
+            };
+
+
+
+
+
+

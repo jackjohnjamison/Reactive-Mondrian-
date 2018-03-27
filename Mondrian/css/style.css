@@ -17,11 +17,6 @@ body {
     background: #eee;
 }
 
-#include-canvas {
-    margin-top: 1em;
-    margin-bottom: 2em;
-}
-
 /**************************************************************
     Mondrian Styles
 ***************************************************************/
@@ -129,9 +124,51 @@ body {
 */
 
 /**************************************************************
-    Fieldset Styles
+    Controle Box Styles
 ***************************************************************/
 
 fieldset {
     margin: 2em 0;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.control-box {
+    background: white;
+    padding: 1em;
+    float: left;
+    margin: 0.5em;
+    
+}
+
+.control-box h3 {
+    margin: 0 0 0.5em 0;
+    text-decoration: underline;
+}
+
+button {
+    margin: 0.5em 0;
+}
+
+input[type = checkbox] {
+    margin-bottom: 1.3em;
+}
+
+input[type = number] {
+    position: absolute;
+    right: 0.5em;
+    width: 3em;
+    text-align: center;
+}
+
+select {
+    padding: 5px;
+    margin-bottom: 0.5em;
+}
+
+.shadows {
+    position: relative;
+    width: 10em;
 }

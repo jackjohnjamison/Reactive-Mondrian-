@@ -30,7 +30,7 @@
             <h1>Reactive Mondrian</h1>
             
             <section>
-                <div id="mondrian-canvas">
+                <div id="mondrian-canvas" class="canvas">
                     <div id="mon-1" class="mondrian-pane"><div class="border-box"></div></div>
                     <div id="mon-2" class="mondrian-pane"><div class="border-box"></div></div>
                     <div id="mon-3" class="mondrian-pane"><div class="border-box"></div></div>
@@ -47,19 +47,51 @@
                 <fieldset>
                     <legend>CSS3 Properties</legend>
                     
-                    <label>Include Canvas </label><input type="checkbox" value="false" id="include-canvas"/><br />
+                    <div class="control-box">
+                        <h3>Border Controls</h3>
+                        
+                        <label>Include Canvas </label><input type="checkbox" value="false" id="include-canvas" /><br />
+
+                        <label>Border Width <span id="border-width-output">3px</span></label><br />
+                        <input type="range" min="1" max="10" value="3" id="border-width-slider" onchange="update_border_width()" />
+                        <br />
+
+                        <label>Border Radius <span id="radius-px-output">by px</span></label><br />
+                        <input type="range" min="0" max="200" value="0" id="border-radius-slider-px" onchange="update_border_radius_px()" />
+                        <br />
+
+                        <label>Border Radius <span id="radius-percentage-output">by %</span></label><br />
+                        <input type="range" min="0" max="50" value="0" id="border-radius-slider-percentage" onchange="update_border_radius_percentage()" />
+                        <br />
+                    </div>
                     
-                    <label>Border Width <span id="border-width-output">3px</span></label><br />
-                    <input type="range" min="1" max="10" value="3" id="border-width-slider" onchange="update_border_width()" />
-                    <br />
-                    
-                    <label>Border Radius <span id="radius-px-output">by px</span></label><br />
-                    <input type="range" min="0" max="200" value="0" id="border-radius-slider-px" onchange="update_border_radius_px()" />
-                    <br />
-                    
-                    <label>Border Radius <span id="radius-percentage-output">by %</span></label><br />
-                    <input type="range" min="0" max="50" value="0" id="border-radius-slider-percentage" onchange="update_border_radius_percentage()" />
-                    <br />
+                    <div class="control-box shadows">
+                        <h3>Shadows</h3>
+                        
+                        <select id="shadowSelect">
+                            <option value="" disabled selected>Select Type</option>
+                            <option value="canvas">Box Shadow</option>
+                            <option value="border-box">Inner Shadow</option>
+                        </select><br />
+                        
+                        <!-- offset-x | offset-y | blur-radius | spread-radius -->
+                        
+                        <label>Offset X:</label>
+                        <input type="number" value="0" min="-20" max="20" id="offset-x"/><br />
+                        
+                        <label>Offset Y:</label>
+                        <input type="number" value="0" min="-20" max="20" id="offset-y"/><br />
+                        
+                        <label>Blur Radius:</label>
+                        <input type="number" value="0" min="-20" max="20" id="blur-radius"/><br />
+                        
+                        <label>Spread Radius:</label>
+                        <input type="number" value="0" min="-20" max="20" id="spread-radius"/><br />
+                        
+                        <button type="button" onclick="boxShadows.shadow()">Apply Shadow</button><br />
+                        
+                        <button type="button" onclick="boxShadows.reset()">Reset</button><br />
+                    </div>
                     
                 </fieldset>
             </section>
